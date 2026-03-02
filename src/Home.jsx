@@ -29,40 +29,40 @@ const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
     const [selectedProject, setSelectedProject] = useState(null);
-    const sectionRefs = {
-        home: useRef(null),
-        about: useRef(null),
-        experience: useRef(null),
-        publications: useRef(null),
-        skills: useRef(null),
-        certifications: useRef(null)
-    };
+    const sectionRefs = useRef({
+        home: null,
+        about: null,
+        experience: null,
+        publications: null,
+        skills: null,
+        certifications: null
+    });
 
     useEffect(() => {
-        const observers = {};
-        const refs = sectionRefs;
+    const observers = {};
+    const refs = sectionRefs.current;
 
-        Object.keys(refs).forEach(key => {
-            const ref = refs[key];
+    Object.keys(refs).forEach(key => {
+        const element = refs[key];
 
-            if (!ref.current) return;
+        if (!element) return;
 
-            observers[key] = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(key);
-                    }
-                },
-                { threshold: 0.3 }
-            );
+        observers[key] = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(key);
+                }
+            },
+            { threshold: 0.3 }
+        );
 
-            observers[key].observe(ref.current);
-        });
+        observers[key].observe(element);
+    });
 
-        return () => {
-            Object.values(observers).forEach(observer => observer.disconnect());
-        };
-    }, [sectionRefs]);
+    return () => {
+        Object.values(observers).forEach(observer => observer.disconnect());
+    };
+}, []);
     // Personal Info
     const personalInfo = {
         name: "DWI RANGGA OKTA ZUHDIYANTO",
