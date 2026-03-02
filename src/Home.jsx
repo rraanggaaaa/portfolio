@@ -689,54 +689,6 @@ const FuturisticPortfolio = () => {
                     </div>
                 </footer>
             </main>
-
-            {/* Add custom CSS for animations */}
-            <style jsx>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 3s ease infinite;
-        }
-        
-        @keyframes typing {
-          from { width: 0; }
-          to { width: 100%; }
-        }
-        
-        .animate-typing {
-          animation: typing 2s steps(40, end);
-        }
-        
-        @keyframes scroll {
-          0% { transform: translateY(0); opacity: 1; }
-          100% { transform: translateY(10px); opacity: 0; }
-        }
-        
-        .animate-scroll {
-          animation: scroll 1.5s ease infinite;
-        }
-        
-        .animate-fade-in {
-          animation: fadeIn 1s ease-out;
-        }
-        
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
         </div>
     );
 };
