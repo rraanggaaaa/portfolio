@@ -38,11 +38,15 @@ const Home = () => {
         certifications: useRef(null)
     };
 
-    // Intersection Observer for active section
     useEffect(() => {
         const observers = {};
+        const refs = sectionRefs;
 
-        Object.keys(sectionRefs).forEach(key => {
+        Object.keys(refs).forEach(key => {
+            const ref = refs[key];
+
+            if (!ref.current) return;
+
             observers[key] = new IntersectionObserver(
                 ([entry]) => {
                     if (entry.isIntersecting) {
@@ -52,16 +56,13 @@ const Home = () => {
                 { threshold: 0.3 }
             );
 
-            if (sectionRefs[key].current) {
-                observers[key].observe(sectionRefs[key].current);
-            }
+            observers[key].observe(ref.current);
         });
 
         return () => {
             Object.values(observers).forEach(observer => observer.disconnect());
         };
-    }, []);
-
+    }, [sectionRefs]);
     // Personal Info
     const personalInfo = {
         name: "DWI RANGGA OKTA ZUHDIYANTO",
