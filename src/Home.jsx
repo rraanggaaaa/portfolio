@@ -13,8 +13,7 @@ import {
     Download,
     Menu,
     X,
-    Linkedin,
-    Github,
+    Globe,
     Sparkles,
     Zap,
     CircuitBoard,
@@ -321,9 +320,6 @@ const Home = () => {
                     <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-2">
                             <Cpu className="w-8 h-8 text-purple-400 animate-pulse" />
-                            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                                DROZ
-                            </span>
                         </div>
 
                         {/* Desktop Menu */}
@@ -450,7 +446,7 @@ const Home = () => {
                             {[
                                 { icon: <Mail />, text: "Email", href: `mailto:${personalInfo.email}` },
                                 { icon: <Phone />, text: "WhatsApp", href: `https://wa.me/${personalInfo.phone}` },
-                                { icon: <Linkedin />, text: "LinkedIn", href: `https://linkedin.com/in/${personalInfo.linkedin}` },
+                                { icon: <Globe />, text: "LinkedIn", href: `https://linkedin.com/in/${personalInfo.linkedin}` },
                                 { icon: <Download />, text: "Download CV", href: "/CV_RANGGA.pdf" }
                             ].map((button, index) => (
                                 <a
@@ -666,8 +662,8 @@ const Home = () => {
 
                         <div className="flex space-x-6">
                             {[
-                                { icon: <Github className="w-5 h-5" />, href: "#" },
-                                { icon: <Linkedin className="w-5 h-5" />, href: `https://linkedin.com/in/${personalInfo.linkedin}` },
+                                { icon: <Globe className="w-5 h-5" />, href: "#" },
+                                { icon: <Globe className="w-5 h-5" />, href: `https://linkedin.com/in/${personalInfo.linkedin}` },
                                 { icon: <Mail className="w-5 h-5" />, href: `mailto:${personalInfo.email}` }
                             ].map((social, index) => (
                                 <a
