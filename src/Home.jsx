@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
     Code2,
     Cpu,
-    Globe,
     BookOpen,
     Award,
     Mail,
@@ -11,8 +10,6 @@ import {
     Calendar,
     ChevronRight,
     ExternalLink,
-    Github,
-    Linkedin,
     Download,
     Menu,
     X,
@@ -21,10 +18,6 @@ import {
     CircuitBoard,
     Rocket,
     Layers,
-    Database,
-    Cloud,
-    Smartphone,
-    PenTool,
     Eye,
     User,
     Briefcase,
