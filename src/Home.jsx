@@ -13,6 +13,8 @@ import {
     Download,
     Menu,
     X,
+    Linkedin,
+    Github,
     Sparkles,
     Zap,
     CircuitBoard,
