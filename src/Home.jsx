@@ -31,7 +31,7 @@ import {
     GraduationCap
 } from 'lucide-react';
 
-const FuturisticPortfolio = () => {
+const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
     const [selectedProject, setSelectedProject] = useState(null);
@@ -693,4 +693,4 @@ const FuturisticPortfolio = () => {
     );
 };
 
-export default FuturisticPortfolio;
+export default Home;
