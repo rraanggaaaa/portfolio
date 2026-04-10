@@ -32,7 +32,7 @@ const Home = () => {
             {/* Teks utama */}
             <div className="text-center z-10">
                 <h1 className="text-6xl md:text-8xl font-black text-white drop-shadow-2xl animate-bounce">
-                    MANDA PENDEK :P
+                    MANDA PENDEK
                 </h1>
             </div>
 
