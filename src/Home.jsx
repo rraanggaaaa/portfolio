@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 const Home = () => {
     const [emojis, setEmojis] = useState([]);
 
-    // Daftar emoji untuk mengejek - dipindahkan ke dalam useEffect atau useCallback
-    const teasingEmojis = ['🤏', '🦐', '📏', '👇', '😆', '🤣', '📐', '🐜', '🪤', '😂', '🙈', '👶'];
-
     // Tambahkan emoji baru setiap detik
     useEffect(() => {
+        // Daftar emoji untuk mengejek - dipindahkan ke dalam useEffect
+        const teasingEmojis = ['🤏', '🦐', '📏', '👇', '😆', '🤣', '📐', '🐜', '🪤', '😂', '🙈', '👶'];
+
         const interval = setInterval(() => {
             const newEmoji = {
                 id: Date.now(),
@@ -24,7 +24,7 @@ const Home = () => {
         }, 500); // Muncul setiap 0.5 detik
 
         return () => clearInterval(interval);
-    }, [teasingEmojis]); // Tambahkan teasingEmojis ke dependency array
+    }, []); // Dependency array kosong karena tidak ada dependency yang berubah
 
     return (
         <div className="relative w-screen h-screen overflow-hidden bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center">
