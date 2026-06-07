@@ -175,10 +175,9 @@ export default function Home() {
           <div className="flex gap-0.5 sm:gap-1">
             {[["Work", "home"], ["Experience", "experience"], ["Skills", "skills"], ["Contact", "contact"]].map(([lbl, id]) => (
               <a key={id} href={`#${id}`} className="px-2 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-semibold transition-all duration-200 no-underline"
-                style={{
-                  background: active === id ? "linear-gradient(135deg,#818cf8,#c084fc)" : "transparent",
-                  color: active === id ? "#fff" : "#5a5a7a",
-                  boxShadow: active === id ? "0 4px 12px rgba(129,140,248,0.35)" : "none",
+                style={{"linear-gradient(135deg,#818cf8,#c084fc)" : "transparent",
+                  "#fff" : "#5a5a7a",
+                  "0 4px 12px rgba(129,140,248,0.35)" : "none",
                 }}>{t(lbl, lbl === "Work" ? "Karya" : lbl === "Experience" ? "Pengalaman" : lbl === "Skills" ? "Keahlian" : "Kontak")}</a>
             ))}
             {/* Language Toggle Button */}
