@@ -5,15 +5,6 @@ import {
   Sparkles, MapPin, Calendar, ExternalLink, Cpu, Terminal, ArrowRight, BookOpen, Zap, Languages
 } from "lucide-react";
 
-/* ── DESIGN TOKENS ── */
-const GRAD = {
-  blue: "linear-gradient(135deg,#818cf8,#60a5fa)",
-  pink: "linear-gradient(135deg,#f9a8d4,#c084fc)",
-  purple: "linear-gradient(135deg,#818cf8,#c084fc)",
-  green: "linear-gradient(135deg,#86efac,#34d399)",
-  amber: "linear-gradient(135deg,#fcd34d,#fb923c)",
-};
-
 const STATS = [
   { number: "2+", labelEn: "Years Exp", labelId: "Tahun Exp", from: "#93c5fd", to: "#818cf8"  },
   { number: "41+", labelEn: "Projects", labelId: "Proyek", from: "#f9a8d4", to: "#c084fc" },
@@ -150,7 +141,6 @@ function SectionHeader({ icon, titleEn, titleId, lang }) {
 
 /* ── MAIN ── */
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
   const [lang, setLang] = useState("en"); // 'en' or 'id'
 
