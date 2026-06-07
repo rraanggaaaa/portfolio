@@ -144,18 +144,6 @@ export default function Home() {
   const [active, setActive] = useState("home");
   const [lang, setLang] = useState("en"); // 'en' or 'id'
 
-  useEffect(() => {
-    const fn = () => {
-      setScrolled(window.scrollY > 30);
-      for (const id of ["contact", "skills", "experience", "home"]) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 140) { setActive(id); break; }
-      }
-    };
-    window.addEventListener("scroll", fn, { passive: true });
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-
   const t = (en, id) => lang === "en" ? en : id;
 
   return (
