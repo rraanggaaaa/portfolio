@@ -141,7 +141,6 @@ function SectionHeader({ icon, titleEn, titleId, lang }) {
 
 /* ── MAIN ── */
 export default function Home() {
-  const [active, setActive] = useState("home");
   const [lang, setLang] = useState("en"); // 'en' or 'id'
 
   const t = (en, id) => lang === "en" ? en : id;
